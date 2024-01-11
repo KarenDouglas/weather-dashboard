@@ -48,7 +48,7 @@ const renderSearchInfo = (cName,todayDate,temp,wind,humid, icon) => {
     <table>
         <tr>            
             <td>Temp</td>
-            <td>${temp}</td>
+            <td>${temp} °F</td>
           </tr>
           <tr>
             <td>Wind</td>
@@ -56,7 +56,7 @@ const renderSearchInfo = (cName,todayDate,temp,wind,humid, icon) => {
           </tr>
           <tr>
             <td>Humidity</td>
-            <td>${humid}</td>
+            <td>${humid} %</td>
           </tr>
     </table>
     </section
@@ -99,7 +99,6 @@ const renderFourDayCards = (data) => {
         </div>
     </li>
         `
-    console.log('here')
     
     } 
 }
@@ -125,11 +124,9 @@ const fetchDataByLatLon = (lat, lon) => {
         const thirdDay = 15
         const fourthDay = 23
         const firstDayDay = 31
-        renderSearchInfo(cityName,dateDUMMY,data.list[0].main.temp, data.list[0].wind.speed, data.list[0].main.humidity, data.list[0].weather[0].icon)
-       console.log(data.list[0].dt_txt.split(' ')[0])      
-       console.log($main)
-       $main.append($forecastWrapper)
-       renderFourDayCards(data)
+        renderSearchInfo(cityName,dateDUMMY,data.list[0].main.temp, data.list[0].wind.speed, data.list[0].main.humidity, data.list[0].weather[0].icon)  
+        $main.append($forecastWrapper)
+        renderFourDayCards(data)
        
         
     }) 
@@ -146,12 +143,11 @@ const convertCityNameToCoord = (cityName) => {
     .then((data)=>{
        const lat = data.city.coord.lat 
        const lon = data.city.coord.lon 
-    console.log('geo',lat,lon)
     fetchDataByLatLon(lat,lon)
     })
     
 }
-
+//renders search results upon submitting
 const handleSearch = (e) => {
     const input = document.querySelector('input')
     searchHistoryArray = JSON.parse(localStorage.getItem('searchHistory')) || []
@@ -162,14 +158,14 @@ const handleSearch = (e) => {
     localStorage.setItem('searchHistory', JSON.stringify(searchHistoryArray))
     renderSearchHistory(searchHistoryArray)
 }
-
+// renders weather info by clicking on search history buttons
 const handleHistoryLink = (e) => {
     if(e.target.hasAttribute('data-city')){
         convertCityNameToCoord(e.target.dataset.city)
     }
-    console.log('after')
+ 
 }
-//convertCityNameToCoord('round rock')
+convertCityNameToCoord('round rock')
 renderSearchHistory(searchHistoryArray)
 $form.addEventListener('submit', handleSearch)
 $searchHistory.addEventListener('click', handleHistoryLink)

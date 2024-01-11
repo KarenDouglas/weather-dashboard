@@ -1,24 +1,48 @@
+:root{
+    --yellow: #f18f01;
+    --dark-blue: #1D3461;
+    --grey: #BFC7BD;
+    --indigo: #7189FF;
+    --light-blue: #8195F2;
+}
+body{
+    background-color: var(--indigo);
+}
+
 section,aside,main, header{
     border: black solid 1px;
+}
+
+/* starter styles */
+.starter{
+    max-width: 500px;
+    margin: 30% auto;
 }
 /* header styles */
 header{
     width: 100%;
     height: 80px;
     text-align: center;
+    background-color: var(--dark-blue);
+    color: var(--yellow);
+    font-size: 48px;
+}
+h1{
+    margin: 10px auto;
 }
 /* search section styles */
 .search-container{
-width: 100%;
 height: 100px;
 background-color: aliceblue;
 display: flex;
 justify-content: center;
 align-items: center;
+background-color: var(--indigo);
 }
+
 input{
   height: 38px;
-  width: 250px;
+  width: 80%;
 
 }
 /* search history section */
@@ -31,7 +55,6 @@ input{
 width: 100%;
 min-height: 300px;
 text-align: center;
-background-color: aliceblue;
 display: flex;
     justify-content: center;
     align-items: center;
@@ -48,6 +71,15 @@ display: flex;
     height: 15%;
     border: black solid 1px;
     padding: 4% 0;
+    background-color: var(--dark-blue);
+    color: var(--grey);
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    
+}
+.sh-item:hover{
+    border: var(--yellow) solid 1px;
 }
 
 /* current weather styles */
@@ -56,7 +88,13 @@ display: flex;
     min-height: 250px;
     margin: 5% auto;
     text-align: center;
-}    
+    background-color: var(--light-blue);
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: var(--dark-blue) solid 1px;
+}
+  
 .current-weather-city{
     text-align: center;
 
@@ -73,6 +111,8 @@ td{
 }
 h2{
     height: 70px;
+    font-size: 32px;
+    font-weight: bold;
 }
 
 /* four day forecast styles */
@@ -86,10 +126,13 @@ h2{
 .day-item{
     display: flex;
     justify-content: space-around;
-    min-height: 60px;
+    min-height: 100%;
+    background-color: var(--dark-blue);
+    border: none;
+    color: var(--grey);
 }
-
-@media screen and (min-width: 800px) {
+/* styles for large screen */
+@media screen and (min-width: 930px) {
     
     aside{
         max-width: 30%;
@@ -110,6 +153,7 @@ h2{
         flex-direction: column;         
         justify-content: space-between;
         height: 80%;
+        border: var(--yellow) solid 1px;
     }
     .day-item li{
         display: flex;    
@@ -145,5 +189,11 @@ h2{
     .forecast-container{
         display: flex;
         justify-content: space-around;
+    }
+    /* search section styles */
+    .search-container{
+      overflow: hidden;
+        min-width:300px;
+           
     }
   }
