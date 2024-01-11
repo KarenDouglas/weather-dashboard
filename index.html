@@ -3,10 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/resets.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <title>Document</title>
+    <title>Weather Dashboard</title>
 </head>
 <body>
+    <header>
+        <h1>Weather APP</h1>
+    </header>
+<aside>
+    <section class="search-container">
+        <input type="search">
+    </section>
+    <section class="search-history-container">
+        <div>
+            <ul>
+                <li class="sh-item">search history</li>
+                <li class="sh-item">search history</li>
+                <li class="sh-item">search history</li>
+                <li class="sh-item">search history</li>
+                <li class="sh-item">search history</li>
+            </ul>
+        </div>
+    </section>
+</aside>
+<main>
+    <section class="current-weather-container">
+    <section class="current-weather-city">
+        
+        <h2><i>icon</i>City Name</h2>
+    </section>
+    <hr>
+    <h3>date</h3>
+    <hr>
+    <table>
+        <tr>            
+            <td>Temp</td>
+            <td>78</td>
+          </tr>
+          <tr>
+            <td>Wind</td>
+            <td>10mph</td>
+          </tr>
+          <tr>
+            <td>Humidity</td>
+            <td>80%</td>
+          </tr>
+    </table>
+    </section>
+    
+    <section class="fourday-forcast">
+        <ul>
+            <li>
+                <div>
+                    <section>
+                        <h4>date</h4>
+                        <i>icon</i>
+                    </section>
+                    <ul>
+                        <li>
+                            <span>Wind</span>
+                            <span>50mph</span>
+                        </li>
+                        <li>
+                            <span>Wind</span>
+                            <span>50mph</span>
+                        </li>
+                        <li>
+                            <span>Wind</span>
+                            <span>50mph</span>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        
+    </section>
+</main>
+
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
