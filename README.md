@@ -3,9 +3,9 @@
 [View the Live Site](https://karendouglas.github.io/weather-dashboard/)
 ![Screenshot 2024-01-11 042328](https://github.com/KarenDouglas/weather-dashboard/assets/79128405/ece96254-324f-4e00-81b2-7f57c7d195e0)
 
-## My Process
 
-### Built With
+
+## Built With
 - JavaScript
 - 5 Day Weather Forecast API
 - CSS
