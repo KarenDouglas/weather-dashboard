@@ -72,7 +72,7 @@ td{
     width: 50%;
 }
 h2{
-    height: 40px;
+    height: 70px;
 }
 
 /* four day forecast styles */
@@ -135,9 +135,13 @@ h2{
     .fdfc-item div{
         height: 100%;
     }
-    #date, #icon{
+    .date, .icon{
         margin: 0 auto;
+        width: 60%;
+       display: flex;
+       justify-content: center;
     }
+    
     .forecast-container{
         display: flex;
         justify-content: space-around;
