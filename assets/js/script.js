@@ -9,14 +9,13 @@ $forecastWrapper.classList.add('fourday-forecast-container')
 const $forecastUL = document.createElement('ul')
 $forecastUL.innerHTML = "nothing to see here"
 $forecastUL.classList.add('forecast-container')
-
-
 $forecastWrapper.append($forecastUL)
 
-
-
+//vars
 const key = '559b9c3178fdd070bff72b402207d441'
 let searchHistoryArray = JSON.parse(localStorage.getItem('searchHistory')) || []
+
+// renders search history from local storage
 const renderSearchHistory = (array) => {
     $searchHistory.innerHTML = ""
     if(array.length){
@@ -35,6 +34,7 @@ const renderSearchHistory = (array) => {
     
     
 }
+// renders the info fetched from url
 const renderSearchInfo = (cName,todayDate,temp,wind,humid, icon) => {
     $main.innerHTML = ""
     $main.innerHTML +=`   
@@ -63,6 +63,7 @@ const renderSearchInfo = (cName,todayDate,temp,wind,humid, icon) => {
     `
     
 }
+// renders the future forecasts 
 const renderFourDayCards = (data) => {
     $forecastUL.innerHTML = ""
     const indexArray = [0,7,15,23,31]
@@ -113,22 +114,10 @@ const fetchDataByLatLon = (lat, lon) => {
     .then((data)=>{
         const cityName = data.city.name
         const dateDUMMY = `Jan 11, 2024`
-       
-        // console.log(data.city.name) 
-        // console.log(data.list[1].main.temp)
-        // console.log(data.list[1].wind.speed)
-        // console.log(data.list[1].main.humidity)
-        // console.log(data.list[1].weather[0].icon)
-        const firstDay = 0
-        const secondDay = 7
-        const thirdDay = 15
-        const fourthDay = 23
-        const firstDayDay = 31
+
         renderSearchInfo(cityName,dateDUMMY,data.list[0].main.temp, data.list[0].wind.speed, data.list[0].main.humidity, data.list[0].weather[0].icon)  
         $main.append($forecastWrapper)
-        renderFourDayCards(data)
-       
-        
+        renderFourDayCards(data)     
     }) 
     
 }
@@ -165,7 +154,7 @@ const handleHistoryLink = (e) => {
     }
  
 }
-convertCityNameToCoord('round rock')
+//convertCityNameToCoord('round rock')
 renderSearchHistory(searchHistoryArray)
 $form.addEventListener('submit', handleSearch)
 $searchHistory.addEventListener('click', handleHistoryLink)

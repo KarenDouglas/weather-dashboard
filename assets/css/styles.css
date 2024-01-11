@@ -17,6 +17,9 @@ section,aside,main, header{
 .starter{
     max-width: 500px;
     margin: 30% auto;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 /* header styles */
 header{
@@ -42,7 +45,7 @@ background-color: var(--indigo);
 
 input{
   height: 38px;
-  width: 80%;
+  min-width: 250px;
 
 }
 /* search history section */
