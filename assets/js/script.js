@@ -82,7 +82,7 @@ const renderFourDayCards = (data) => {
                     <span>${date}</span>
                 </li>
                 <li class="icon">
-                    <span><img src="http://openweathermap.org/img/w/${icon}.png" alt="weather icon"></span>
+                    <span><img src="https://openweathermap.org/img/w/${icon}.png" alt="weather icon"></span>
                 </li>
                 <li>
                     <span class="title">Temp</span>
