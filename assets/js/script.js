@@ -66,7 +66,7 @@ const renderSearchInfo = (cName,todayDate,temp,wind,humid, icon) => {
 // renders the future forecasts 
 const renderFourDayCards = (data) => {
     $forecastUL.innerHTML = ""
-    const indexArray = [0,7,15,23,31]
+    const indexArray = [7,15,23,31]
     for(let i = 0; i < indexArray.length; i++){
         const date = data.list[indexArray[i]].dt_txt.split(' ')[0]
         const temp = data.list[indexArray[i]].main.temp
@@ -115,7 +115,7 @@ const fetchDataByLatLon = (lat, lon) => {
         const cityName = data.city.name
         const dateDUMMY = `Jan 11, 2024`
 
-        renderSearchInfo(cityName,dateDUMMY,data.list[0].main.temp, data.list[0].wind.speed, data.list[0].main.humidity, data.list[0].weather[0].icon)  
+        renderSearchInfo(cityName,data.list[0].dt_txt.split(' ')[0],data.list[0].main.temp, data.list[0].wind.speed, data.list[0].main.humidity, data.list[0].weather[0].icon)  
         $main.append($forecastWrapper)
         renderFourDayCards(data)     
     }) 
