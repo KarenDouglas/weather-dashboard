@@ -76,3 +76,70 @@ h2{
 }
 
 /* four day forecast styles */
+.fourday-forecast-container{
+    min-height: 300px;
+
+}
+.title{
+    display: none;
+}
+.day-item{
+    display: flex;
+    justify-content: space-around;
+    min-height: 60px;
+}
+
+@media screen and (min-width: 800px) {
+    
+    aside{
+        max-width: 30%;
+    }
+    main{
+        min-width: 70%;
+    }
+    .wrapper{
+        display: flex;
+    }
+   
+    .title{
+        display: flex;
+    }
+    
+    .day-item {
+        display: flex;
+        flex-direction: column;         
+        justify-content: space-between;
+        height: 80%;
+    }
+    .day-item li{
+        display: flex;    
+    }
+    .day-item li span{
+        width: 50%;
+        height: 30px;
+    }
+    .fourday-forecast-container{
+        display: flex;
+        flex-direction:row;     
+    }
+    .fourday-forecast-container ul {
+        display: flex;      
+        margin: 0 auto;
+        width: 100%;
+    }
+    .fdfc-item{
+        width: 20%;
+        height: 100%;      
+        border: black solid 1px;
+    }
+    .fdfc-item div{
+        height: 100%;
+    }
+    #date, #icon{
+        margin: 0 auto;
+    }
+    .forecast-container{
+        display: flex;
+        justify-content: space-around;
+    }
+  }

@@ -11,75 +11,146 @@
     <header>
         <h1>Weather APP</h1>
     </header>
-<aside>
-    <section class="search-container">
-        <input type="search">
-    </section>
-    <section class="search-history-container">
-        <div>
-            <ul>
-                <li class="sh-item">search history</li>
-                <li class="sh-item">search history</li>
-                <li class="sh-item">search history</li>
-                <li class="sh-item">search history</li>
-                <li class="sh-item">search history</li>
+<div class="wrapper">
+    <aside>
+        <section class="search-container">
+            <input type="search" placeholder="Enter City Name">
+        </section>
+        <section class="search-history-container">
+            <div>
+                <ul>
+                    <li class="sh-item">search history</li>
+                    <li class="sh-item">search history</li>
+                    <li class="sh-item">search history</li>
+                    <li class="sh-item">search history</li>
+                    <li class="sh-item">search history</li>
+                </ul>
+            </div>
+        </section>
+    </aside>
+    <main>
+        <section class="current-weather-container">
+        <section class="current-weather-city">
+            
+            <h2><i>icon</i>City Name</h2>
+        </section>
+        <hr>
+        <h3>date</h3>
+        <hr>
+        <table>
+            <tr>            
+                <td>Temp</td>
+                <td>78</td>
+              </tr>
+              <tr>
+                <td>Wind</td>
+                <td>10mph</td>
+              </tr>
+              <tr>
+                <td>Humidity</td>
+                <td>80%</td>
+              </tr>
+        </table>
+        </section>
+        
+        <section class="fourday-forecast-container">
+            <ul class="forecast-container">
+                <li class="fdfc-item">
+                    <div>
+                        <ul class="day-item">
+                            <li>
+                                <span>date</span>
+                                <span>icon</span>
+                            </li>
+                            <li>
+                                <span class="title">Wind</span>
+                                <span>50mph</span>
+                            </li>
+                            <li>
+                                <span class="title">Wind</span>
+                                <span>50mph</span>
+                            </li>
+                            <li>
+                                <span class="title">Wind</span>
+                                <span>50mph</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="fdfc-item">
+                    <div>
+                        <ul class="day-item">
+                            <li>
+                                <span>date</span>
+                                <span>icon</span>
+                            </li>
+                            <li>
+                                <span class="title">Wind</span>
+                                <span>50mph</span>
+                            </li>
+                            <li>
+                                <span class="title">Wind</span>
+                                <span>50mph</span>
+                            </li>
+                            <li>
+                                <span class="title">Wind</span>
+                                <span>50mph</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="fdfc-item">
+                    <div>
+                        <ul class="day-item">
+                            <li>
+                                <span>date</span>
+                                <span>icon</span>
+                            </li>
+                            <li>
+                                <span class="title">Wind</span>
+                                <span>50mph</span>
+                            </li>
+                            <li>
+                                <span class="title">Wind</span>
+                                <span>50mph</span>
+                            </li>
+                            <li>
+                                <span class="title">Wind</span>
+                                <span>50mph</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="fdfc-item">
+                    <div>
+                        <ul class="day-item">
+                            <li id="date">
+                                <span>date</span>
+                            </li>
+                            <li id="icon">
+                                <span>icon</span>
+                            </li>
+                            <li>
+                                <span class="title">Wind</span>
+                                <span>50mph</span>
+                            </li>
+                            <li>
+                                <span class="title">Wind</span>
+                                <span>50mph</span>
+                            </li>
+                            <li>
+                                <span class="title">Wind</span>
+                                <span>50mph</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
-        </div>
-    </section>
-</aside>
-<main>
-    <section class="current-weather-container">
-    <section class="current-weather-city">
-        
-        <h2><i>icon</i>City Name</h2>
-    </section>
-    <hr>
-    <h3>date</h3>
-    <hr>
-    <table>
-        <tr>            
-            <td>Temp</td>
-            <td>78</td>
-          </tr>
-          <tr>
-            <td>Wind</td>
-            <td>10mph</td>
-          </tr>
-          <tr>
-            <td>Humidity</td>
-            <td>80%</td>
-          </tr>
-    </table>
-    </section>
-    
-    <section class="fourday-forcast">
-        <ul>
-            <li>
-                <div>
-                    <section>
-                        <h4>date</h4>
-                        <i>icon</i>
-                    </section>
-                    <ul>
-                        <li>
-                            <span>Wind</span>
-                            <span>50mph</span>
-                        </li>
-                        <li>
-                            <span>Wind</span>
-                            <span>50mph</span>
-                        </li>
-                        <li>
-                            <span>Wind</span>
-                            <span>50mph</span>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-        
-    </section>
-</main>
+            
+        </section>
+    </main>
+</div>    
+
 
     <script src="./assets/js/script.js"></script>
 </body>
